@@ -21,12 +21,14 @@ h1 {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1s ease-in;
+    order: 0;
 }
 
 h2 {
     font-size: 2rem;
     margin: 20px 0;
     animation: slideIn 1s ease-in 0.5s both;
+    order: 5;
 }
 
 h3 {
@@ -34,37 +36,42 @@ h3 {
     margin: 20px 0;
     font-weight: normal;
     animation: slideIn 1s ease-in 1s both;
+    order: 6;
 }
 
 /* Dice Labels */
 #xlabel, #ylabel, #zlabel {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     background: linear-gradient(145deg, #ffffff, #e0e0e0);
     border: 3px solid #333;
-    border-radius: 15px;
-    margin: 10px;
+    border-radius: 12px;
+    margin: 8px;
     text-align: center;
-    line-height: 80px;
-    font-size: 2.5rem;
+    line-height: 60px;
+    font-size: 2rem;
     font-weight: bold;
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     animation: rollIn 0.5s ease-out;
+    order: 1;
 }
 
 #xlabel {
     animation-delay: 0.1s;
+    order: 1;
 }
 
 #ylabel {
     animation-delay: 0.2s;
+    order: 2;
 }
 
 #zlabel {
     animation-delay: 0.3s;
+    order: 3;
 }
 
 /* Button Styles */
@@ -81,6 +88,7 @@ button {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     margin: 20px 0;
     animation: pulse 2s infinite;
+    order: 4;
 }
 
 button:hover {
@@ -102,6 +110,7 @@ footer {
     text-align: center;
     border-radius: 10px 10px 0 0;
     animation: fadeInUp 1s ease-in 2s both;
+    order: 7;
 }
 
 footer p {
@@ -160,11 +169,12 @@ marquee {
         font-size: 1rem;
     }
     #xlabel, #ylabel, #zlabel {
-        width: 60px;
-        height: 60px;
-        font-size: 2rem;
-        line-height: 60px;
-        margin: 8px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        line-height: 50px;
+        margin: 6px;
+        border-radius: 10px;
     }
     button {
         padding: 12px 25px;
@@ -189,11 +199,12 @@ marquee {
         font-size: 0.9rem;
     }
     #xlabel, #ylabel, #zlabel {
-        width: 50px;
-        height: 50px;
-        font-size: 1.5rem;
-        line-height: 50px;
-        margin: 5px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        line-height: 40px;
+        margin: 4px;
+        border-radius: 8px;
     }
     button {
         padding: 10px 20px;
