@@ -36,12 +36,35 @@ h3 {
     animation: slideIn 1s ease-in 1s both;
 }
 
-label#roll {
-    font-size: 4rem;
+/* Dice Labels */
+#xlabel, #ylabel, #zlabel {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(145deg, #ffffff, #e0e0e0);
+    border: 3px solid #333;
+    border-radius: 15px;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin: 20px 0;
-    display: block;
-    animation: bounceIn 1s ease-in 1.5s both;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: rollIn 0.5s ease-out;
+}
+
+#xlabel {
+    animation-delay: 0.1s;
+}
+
+#ylabel {
+    animation-delay: 0.2s;
+}
+
+#zlabel {
+    animation-delay: 0.3s;
 }
 
 /* Button Styles */
@@ -120,6 +143,11 @@ marquee {
     to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes rollIn {
+    from { transform: rotateY(90deg) scale(0.5); opacity: 0; }
+    to { transform: rotateY(0deg) scale(1); opacity: 1; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     h1 {
@@ -131,8 +159,12 @@ marquee {
     h3 {
         font-size: 1rem;
     }
-    label#roll {
-        font-size: 3rem;
+    #xlabel, #ylabel, #zlabel {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+        line-height: 60px;
+        margin: 8px;
     }
     button {
         padding: 12px 25px;
@@ -156,8 +188,12 @@ marquee {
     h3 {
         font-size: 0.9rem;
     }
-    label#roll {
-        font-size: 2.5rem;
+    #xlabel, #ylabel, #zlabel {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        line-height: 50px;
+        margin: 5px;
     }
     button {
         padding: 10px 20px;
